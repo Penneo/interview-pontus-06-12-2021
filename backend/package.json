@@ -1,0 +1,37 @@
+{
+  "name": "minimum-nodejs-typescript-express",
+  "version": "1.0.0",
+  "description": "A minimum typescript,nodejs and express application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc && node dist/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dotnetjalps/minimum-nodejs-typescript-express.git"
+  },
+  "keywords": [
+    "typescript",
+    "nodejs",
+    "express"
+  ],
+  "devDependencies": {
+    "@types/dotenv": "^4.0.2",
+    "@types/express": "*",
+    "@types/node": "*",
+    "config": "file:../config",
+    "typescript": "3.6.4"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "dotenv": "^5.0.1",
+    "express": "4.16.2"
+  },
+  "author": "Jalpesh Vadgama",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dotnetjalps/minimum-nodejs-typescript-express/issues"
+  },
+  "homepage": "https://github.com/dotnetjalps/minimum-nodejs-typescript-express#readme"
+}
