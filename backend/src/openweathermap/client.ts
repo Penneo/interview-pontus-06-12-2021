@@ -10,7 +10,8 @@ export class Client {
     constructor(
         private readonly httpClient: AxiosInstance,
         private readonly baseUrl: string,
-        private readonly apiKey: string
+        private readonly apiKey: string,
+        private readonly clientType: number,
     ) {
     }
 
@@ -27,7 +28,7 @@ export class Client {
     }
 
     public async getCurrentById(id: string): Promise<CurrentWeatherResult> {
-        const response = await this.get(`/weather`, {Id: id});
+        const response = await this.get(`/weather`, {id: id});
 
         return response.data;
     }
@@ -41,10 +42,16 @@ export class Client {
     }
 
     private makeUrl(endpoint: string): string {
+        console.log(this.baseUrl + endpoint);
         return this.baseUrl + endpoint;
     }
 
     private makeParams(params: object): object {
-        return {APPID: this.apiKey, ...params};
+        console.log(this.apiKey, params)
+        return {APPID: this.apiKey, units: "metric", ...params};
+    }
+    
+    public getType(): number {
+        return this.clientType;
     }
 }
