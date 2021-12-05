@@ -48,3 +48,7 @@ Please see the `example-requests.md` file. If some of the requests fail, you mig
 - [ ] Change the temperature units from Kelvin to °C. You may be tempted to just use a formula, try not to.
 - [ ] Change the API so that it returns random values for temperature, latitude, location names, etc. You can do this however you see fit, but it should be possible to toggle this useful 'feature' on and off from config or using an environment variable.
 
+## Random weather
+Change WeatherClientType in clientType.json to use normal API or random generator.
+WeatherClientType = 0 -> Normal API
+WeatherClientType = 1 -> Randomizes the the weather
